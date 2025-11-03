@@ -1,0 +1,50 @@
+
+@font-family: "Poppins", sans-serif;
+@bg: #f4f7fa;
+@text-color: #222;
+@muted: #555;
+@primary: #0066cc;
+@card-bg: #fff;
+@card-radius: 15px;
+@card-padding: 20px;
+@card-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+@max-width: 1000px;
+
+.reset-box-sizing() {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: @font-family;
+}
+
+.text-center() {
+  text-align: center;
+}
+
+.container-max() {
+  max-width: @max-width;
+  margin: auto;
+}
+
+.card() {
+  background: @card-bg;
+  padding: @card-padding;
+  border-radius: @card-radius;
+  box-shadow: @card-shadow;
+  transition: transform .3s;
+}
+
+.hover-lift() {
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.u-muted() { color: @muted; }
+.u-primary() { color: @primary; }
+
+.responsive-grid(@min) {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(@min, 1fr));
+}
